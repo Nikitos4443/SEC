@@ -106,7 +106,6 @@ const ContactForm = () => {
             [name]: value
         }));
 
-        // Clear error when user starts typing
         if (errors[name]) {
             setErrors(prev => ({
                 ...prev,
@@ -127,7 +126,6 @@ const ContactForm = () => {
     };
 
     const handleSubmit = async () => {
-        // Rate limiting check
         const now = Date.now();
         if (now - lastSubmit < 10000) {
             setSubmitStatus('error');
@@ -143,7 +141,6 @@ const ContactForm = () => {
         setSubmitStatus('');
 
         try {
-            // Підготовка даних для відправки
             const requestData = {
                 firstName: formData.firstName,
                 lastName: formData.lastName,
@@ -159,13 +156,12 @@ const ContactForm = () => {
                 recaptchaToken: captcha
             };
 
-            // Відправка на сервер
-            const response = await fetch('http://localhost:4000/send-email', {
+            const response = await fetch('/api/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(requestData)
+                body: JSON.stringify(requestData),
             });
 
             const result = await response.json();
@@ -189,7 +185,6 @@ const ContactForm = () => {
                     notes: ''
                 });
 
-                // Reset captcha
                 setCaptcha(null);
                 if (recaptchaRef.current) {
                     recaptchaRef.current.reset();
