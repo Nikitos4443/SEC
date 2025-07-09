@@ -44,8 +44,8 @@ export default async function handler(req, res) {
         });
 
         const message = {
-            from: process.env.SMTP_EMAIL,
-            to: process.env.SMTP_EMAIL,
+            from: email,
+            to: 'Nikitos4443@gmail.com',
             subject: 'New Service Request',
             html: `
         <h3>New Service Request</h3>
