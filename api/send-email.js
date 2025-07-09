@@ -41,7 +41,7 @@ export default async function handler(req, res) {
                 user: process.env.SMTP_EMAIL,
                 pass: process.env.SMTP_PASSWORD
             }
-        });
+        })
 
         const message = {
             from: process.env.SMTP_EMAIL,
