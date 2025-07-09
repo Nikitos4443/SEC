@@ -444,7 +444,7 @@ const ContactForm = () => {
                 <div>
                     <ReCAPTCHA
                         ref={recaptchaRef}
-                        sitekey="6LeZXn0rAAAAANaXdM3DTE_THyePLUNIGISR91aq"
+                        sitekey="6LcseH0rAAAAALgzFvPeoHXekQQZprFvccWG2R4t"
                         onChange={handleCaptchaChange}
                     />
                     {errors.captcha && <p className="mt-1 text-sm text-red-600">{errors.captcha}</p>}
