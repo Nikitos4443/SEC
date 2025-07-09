@@ -61,7 +61,6 @@ function Home() {
                 ease: "power3.out"
             }, "-=0.3");
 
-        // Анімація статистики
         gsap.fromTo(statisticsRef.current?.children, {
             opacity: 0,
             y: 60,
@@ -81,7 +80,6 @@ function Home() {
             }
         });
 
-        // Анімація секції Security Stuffing Solutions
         gsap.fromTo(securitySectionRef.current?.querySelector('span'), {
             opacity: 0,
             y: 40
@@ -97,7 +95,6 @@ function Home() {
             }
         });
 
-        // Анімація карток
         gsap.fromTo(infoCardsRef.current?.children, {
             opacity: 0,
             y: 80,
@@ -116,7 +113,6 @@ function Home() {
             }
         });
 
-        // Анімація блоку під картками
         gsap.fromTo(underInfoRef.current?.querySelector('img'), {
             opacity: 0,
             x: -100,
@@ -149,7 +145,6 @@ function Home() {
             }
         });
 
-        // Анімація заголовка сервісів
         gsap.fromTo(servicesRef.current?.querySelector('h2'), {
             opacity: 0,
             y: 40
@@ -181,7 +176,6 @@ function Home() {
             }
         });
 
-        // Анімація фонових фігур
         figuresRef.current.forEach((figure, index) => {
             if (figure) {
                 gsap.fromTo(figure, {
@@ -203,7 +197,6 @@ function Home() {
             }
         });
 
-        // Анімація карток сервісів
         serviceCardsRef.current.forEach((card, index) => {
             if (card) {
                 const isLeft = index % 2 === 1;
@@ -226,7 +219,6 @@ function Home() {
             }
         });
 
-        // Паралакс ефект для фонових фігур
         figuresRef.current.forEach((figure) => {
             if (figure) {
                 gsap.to(figure, {
@@ -242,7 +234,6 @@ function Home() {
             }
         });
 
-        // Cleanup
         return () => {
             ScrollTrigger.getAll().forEach(trigger => trigger.kill());
         };
@@ -282,18 +273,18 @@ function Home() {
 
             <section ref={securitySectionRef} className="relative bg-[#191717] px-6 md:px-16 pt-12 pb-5">
                 <div className="mb-8">
-                    <span className="text-white text-3xl font-semibold w-[100%] flex justify-center">
+                    <span className="text-white text-3xl font-semibold w-[100%] flex justify-center text-center">
                         {t('home.sss.title')}
                     </span>
                 </div>
 
                 <div ref={infoCardsRef} className="flex sm:flex-row flex-col items-center justify-center 2xl:gap-45 xl:gap-35 lg:gap-25 md:gap-7 gap-3">
-                    <InfoCardHome image={firstInfoCardHome} />
-                    <InfoCardHome image={secondInfoCardHome} />
-                    <InfoCardHome image={thirdInfoCardHome} />
+                    <InfoCardHome image={firstInfoCardHome} title={t('home.sss.cards.first.title')} desc={t('home.sss.cards.first.description')} />
+                    <InfoCardHome image={secondInfoCardHome} title={t('home.sss.cards.second.title')} desc={t('home.sss.cards.second.description')} />
+                    <InfoCardHome image={thirdInfoCardHome} title={t('home.sss.cards.third.title')} desc={t('home.sss.cards.third.description')} />
                 </div>
 
-                <div ref={underInfoRef} className="flex md:flex-row flex-col items-center justify-around text-white">
+                <div ref={underInfoRef} className="flex md:flex-row flex-col items-center justify-around text-white mt-10">
                     <img src={under_info_cards_image} alt="" className="w-80 rounded-md" />
                     <div className="info-text w-[80%] md:w-[40%] flex flex-col justify-center items-center md:items-start">
                         <h2 className="text-2xl font-bold mb-2 text-center md:mt-0 mt-4 leading-tight">
@@ -305,7 +296,7 @@ function Home() {
                         </span>
                         <div className="flex items-center gap-2 mt-4">
                             <img src={phone} alt="Phone" className="w-5" />
-                            <span className="text-[#45ACB7] text-sm">+43 676 542 24 57</span>
+                            <span className="text-[#45ACB7] text-sm"><a href="tel:+43 676 542 24 57">+43 676 542 24 57</a></span>
                         </div>
                         <div className="mt-4">
                             <Button color="#FFFFFF" text="black" />

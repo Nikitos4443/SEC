@@ -1,6 +1,8 @@
 import {useNavigate} from "react-router-dom";
+import {useTranslation} from "react-i18next";
 
 function Button({ color = '#45ACB7', text = 'white' }) {
+    const { t } = useTranslation();
     const navigate = useNavigate();
     let sizeStyle = 'p-2 text-md';
 
@@ -9,7 +11,7 @@ function Button({ color = '#45ACB7', text = 'white' }) {
             style={{ backgroundColor: color, color: text }}
             onClick={() => navigate('contact')}
             className={`rounded-md ${sizeStyle} cursor-pointer w-full`}>
-            Contact us
+            {t('contactButton')}
         </button>
     );
 }

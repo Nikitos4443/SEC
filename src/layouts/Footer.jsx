@@ -11,21 +11,23 @@ import {
 import React from "react";
 import {Button} from "../shared";
 import {Link} from "react-router-dom";
+import {useTranslation} from "react-i18next";
 
 function Footer() {
+    const { t } = useTranslation();
+
     return (
         <footer className="bg-[#191717] text-white w-[100%]">
             <section className="relative">
                 <img src={footer_image} alt="" className="brightness-20 h-80 object-cover z-0 w-full"/>
                 <div
                     className="absolute inset-0 flex flex-col items-center justify-center text-center gap-2 z-10 px-4 py-8">
-                    <p className="text-base md:text-lg">Trusted Security. Proven Reliability</p>
+                    <p className="text-base md:text-lg">{t('footer.title')}</p>
                     <p className="text-lg md:text-xl font-bold tracking-wide text-center md:mb-4 mb-7">
-                        SECURITY EVENTMANAGEMENT CREW
+                        {t('footer.name')}
                     </p>
                     <p className="text-sm md:text-base max-w-[90%] lg:max-w-[60%] md:block hidden mb-4">
-                        Protect what matters with expert, tailored solutions. Our skilled team is here to safeguard your
-                        future — professionally and personally. Partner with us for peace of mind.
+                        {t('footer.desc')}
                     </p>
                     <div>
                         <Link to="contact">
@@ -41,7 +43,7 @@ function Footer() {
                 <ul className="list-none flex flex-col gap-3 text-sm md:text-base">
                     <li className="flex items-center gap-2">
                         <img src={phone} alt="Phone" className="w-5 md:w-6"/>
-                        <span className="text-[#45ACB7]">+43 676 542 24 57</span>
+                        <span className="text-[#45ACB7]"><a href="tel:+43 676 542 24 57">+43 676 542 24 57</a></span>
                     </li>
                     <li className="flex items-center gap-2">
                         <img src={location} alt="Location" className="w-5 md:w-6"/>
@@ -49,7 +51,7 @@ function Footer() {
                     </li>
                     <li className="flex items-center gap-2">
                         <img src={mail} alt="Email" className="w-5 md:w-6"/>
-                        <span className="text-[#45ACB7]">office@sec-crew.at</span>
+                        <span className="text-[#45ACB7]"><a href="mailto:office@sec-crew.at">office@sec-crew.at</a></span>
                     </li>
                 </ul>
 
@@ -57,7 +59,12 @@ function Footer() {
                     <a href="">
                         <img src={instagram} alt="Instagram" className="w-8 md:w-10"/>
                     </a>
-                    <a href="">
+                    <a
+                        href="https://wa.me/436765422457"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-green-500 hover:underline"
+                    >
                         <img src={whatsapp} alt="WhatsApp" className="w-8 md:w-10"/>
                     </a>
                     <a href="">

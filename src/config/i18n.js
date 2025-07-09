@@ -19,6 +19,7 @@ i18n.use(initReactI18next).init({
                 footer: {
                     title: 'Trusted Security. Proven Reliability',
                     name: 'SECURITY EVENTMANAGEMENT CREW',
+                    desc: 'Protect what matters with expert, tailored solutions. Our skilled team is here to safeguard your future — professionally and personally. Partner with us for peace of mind.'
                 },
                 home: {
                     title: 'Secure Your Business with Top Talent',
@@ -29,6 +30,20 @@ i18n.use(initReactI18next).init({
                     solutions: 'Individual solutions',
                     sss: {
                         title: 'Security Stuffing Solutions',
+                        cards: {
+                            first: {
+                                title: 'Comprehensive Security Analysis',
+                                description: 'Our expert team conducts thorough assessments to identify vulnerabilities in your security infrastructure'
+                            },
+                            second: {
+                                title: 'Custom Security Staffing Solutions',
+                                description: 'We provide specialized security professionals tailored to meet your specific business needs and challenges'
+                            },
+                            third: {
+                                title: 'Ongoing Security Support Services',
+                                description: 'Benefit from continuous support to ensure your security systems remain robust and up-to-date'
+                            }
+                        },
                         second_title_1: 'Security & Protection!',
                         second_title_2: 'We meet your needs!',
                         subtitle: 'Whether you’re a business, a private client, or organizing an event — we provide tailored security solutions designed to meet the highest standards. Our expert team and cutting-edge technology ensure you’re protected 24/7. Reach out today for a free consultation — no obligations. Let’s build the perfect security plan together.',
@@ -162,7 +177,8 @@ i18n.use(initReactI18next).init({
                         },
                         submitButton: 'Submit'
                     }
-                }
+                },
+                contactButton: 'Contact us'
             }
         },
         de: {
@@ -175,6 +191,7 @@ i18n.use(initReactI18next).init({
                 footer: {
                     title: 'Vertraute Sicherheit. Bewährte Zuverlässigkeit',
                     name: 'SECURITY EVENTMANAGEMENT CREW',
+                    desc: 'Schütze, was dir wichtig ist, mit fachkundigen, maßgeschneiderten Lösungen. Unser erfahrenes Team ist hier, um deine Zukunft – professionell und persönlich – zu sichern. Arbeite mit uns zusammen für sorgenfreie Sicherheit'
                 },
                 home: {
                     title: 'Sichern Sie Ihr Unternehmen mit den besten Fachkräften',
@@ -185,6 +202,20 @@ i18n.use(initReactI18next).init({
                     solutions: 'Individuelle Lösungen',
                     sss: {
                         title: 'Lösungen für die Personalausstattung im Sicherheitsdienst',
+                        cards: {
+                            first: {
+                                title: 'Umfassende Sicherheitsanalyse',
+                                description: 'Unser Expertenteam führt gründliche Bewertungen durch, um Schwachstellen in Ihrer Sicherheitsinfrastruktur zu identifizieren'
+                            },
+                            second: {
+                                title: 'Maßgeschneiderte Sicherheitslösungen',
+                                description: 'Wir bieten spezialisierte Sicherheitskräfte, die genau auf Ihre Geschäftsanforderungen und Herausforderungen abgestimmt sind'
+                            },
+                            third: {
+                                title: 'Fortlaufende Sicherheitsunterstützungsdienste',
+                                description: 'Profitieren Sie von kontinuierlicher Unterstützung, um sicherzustellen, dass Ihre Sicherheitssysteme robust und aktuell bleiben'
+                            }
+                        },
                         second_title_1: 'Sicherheit & Schutz!',
                         second_title_2: 'Wir erfüllen Ihre Anforderungen!',
                         subtitle: 'Ob Unternehmen, Privatkunde oder Veranstalter – wir bieten maßgeschneiderte Sicherheitslösungen nach höchsten Standards. Unser Expertenteam und modernste Technologie sorgen rund um die Uhr für Ihren Schutz. Kontaktieren Sie uns noch heute für eine unverbindliche und kostenlose Beratung. Gemeinsam entwickeln wir das ideale Sicherheitskonzept für Sie.',
@@ -319,7 +350,8 @@ i18n.use(initReactI18next).init({
                         },
                         submitButton: 'Absenden'
                     }
-                }
+                },
+                contactButton: 'Kontaktieren Sie uns'
             }
         }
     }
